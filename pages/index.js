@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import IndexPageHeader from "../components/index_page/index_page_header/index_page_header";
+import AboutMeCover from "../components/index_page/about_me_cover";
+import IndexPageHeader from "../components/index_page/index_page_header";
+import MyProjectsCover from "../components/index_page/my_projects_cover";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       </Head>
 
       <IndexPageHeader />
+      <MyProjectsCover />
+      <AboutMeCover/>
     </div>
   );
 }

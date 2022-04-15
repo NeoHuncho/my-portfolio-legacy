@@ -11,10 +11,8 @@ import {
   Scrooldown,
   GridHorizontal,
   ImageSection,
-} from "../../../styles/styles.js";
-import { mediaQueries } from "../../../styles/mediaQueries";
-
-import scroolDown from "../../../public/assets/ui_img/scroll_down_bar.svg";
+} from "../../styles/styles.js";
+import { mediaQueries } from "../../styles/mediaQueries";
 
 const SubTitle = styled.h2`
   font-family: Roboto;
@@ -65,8 +63,8 @@ function IndexPageHeader() {
           >
             <Image
               src={"/assets/main_img/computer.svg"}
-              width={800}
-              height={800}
+              width={600}
+              height={600}
             />
           </motion.div>
         </ImageSection>
