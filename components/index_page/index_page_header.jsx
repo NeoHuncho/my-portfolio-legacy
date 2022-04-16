@@ -63,8 +63,9 @@ function IndexPageHeader() {
           >
             <Image
               src={"/assets/main_img/computer.svg"}
-              width={600}
-              height={600}
+              width={1}
+              height={1}
+              layout="responsive"
             />
           </motion.div>
         </ImageSection>

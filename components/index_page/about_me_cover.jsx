@@ -21,12 +21,13 @@ import Link from "next/link";
 
 const ThisImageSection = styled(ImageSection)`
   @media ${mediaQueries.desktop} {
-    margin-left: 10vw;
+    grid-area: image;
+    padding: 15% 15% 15% 15%;
   }
 
   @media ${mediaQueries.mobile} {
-    margin-left: 12%;
-    margin-top: 15%;
+    padding: 5% 5% 5%;
+    margin-top: 0;
   }
 
   @media ${mediaQueries.ipadAndIpadPro} {
@@ -37,8 +38,8 @@ const ThisImageSection = styled(ImageSection)`
 
 const ThisTitleSection = styled(TitleSection)`
   @media ${mediaQueries.mobile} {
-    margin-top: 10%;
     margin-bottom: 10%;
+    margin-top: -20%;
   }
 
   @media ${mediaQueries.ipadAndIpadPro} {
@@ -69,8 +70,9 @@ function AboutMeCover() {
               <Image
                 src={"/assets/main_img/astronaut.svg"}
                 alt="Computer"
-                width={400}
-                height={500}
+                width={4}
+                height={5}
+                layout="responsive"
               />
               /
             </motion.div>

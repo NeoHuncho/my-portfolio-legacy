@@ -183,7 +183,8 @@ export const ImageSection = styled(motion.div)`
 
   @media ${mediaQueries.desktop} {
     grid-area: image;
-    width: 90vw;
+
+    margin-right: 5%;
   }
 `;
 

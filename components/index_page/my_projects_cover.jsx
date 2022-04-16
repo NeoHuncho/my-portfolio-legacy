@@ -71,8 +71,10 @@ export default function MyProjects() {
             >
               <Image
                 src={"/assets/main_img/workspace.png"}
-                width={600}
-                height={400}
+                width={10}
+                height={6}
+                layout="responsive"
+                
               />
             </ImageSection>
           </ThisImageSection>
