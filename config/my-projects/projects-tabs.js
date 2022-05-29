@@ -1,5 +1,5 @@
-import projects from "../public/assets/projects";
-import technologies from "../public/assets/technologies/logo_full";
+import projects from "../../public/assets/projects";
+import technologies from "../../public/assets/technologies/logo_full";
 
 const myProjectsTabs = [
   {

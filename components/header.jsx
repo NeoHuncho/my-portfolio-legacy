@@ -11,11 +11,10 @@ import {
   Scrooldown,
   GridHorizontal,
   ImageSection,
-} from "../../styles/styles";
-import { mediaQueries } from "../../styles/mediaQueries";
+} from "../styles/styles";
+import { mediaQueries } from "../styles/mediaQueries";
 
 import Image from "next/image";
-import main_img from "../../public/assets/main_img/main_img";
 
 const ThisTitleSection = styled(motion.div)`
   @media ${mediaQueries.mobile} {
@@ -56,8 +55,7 @@ const Svg = styled(motion.img)`
     margin-left: 4%;
   }
 `;
-export default function MyProjectsHeader() {
-  console.log(main_img.computer_projects);
+export default function Header({ title, image }) {
   const variantstext = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -68,8 +66,8 @@ export default function MyProjectsHeader() {
         <Image
           src={"/assets/ui_img/scroll_down_bar.svg"}
           style={{ zIndex: 1 }}
-          width={100}
-          height={150}
+          width={250}
+          height={450}
         />
       </Scrooldown>
       <GridHorizontal>
@@ -87,10 +85,10 @@ export default function MyProjectsHeader() {
             }}
           >
             <Image
-              src={main_img.computer_projects}
+              src={image.src}
               alt="Computer"
-              width={1254}
-              height={657}
+              width={image.width}
+              height={image.height}
               layout="responsive"
               priority={true}
             />
@@ -103,7 +101,7 @@ export default function MyProjectsHeader() {
           variants={variantstext}
           transition={{ ease: "easeOut", duration: 1 }}
         >
-          <Title>MY PROJECTS</Title>
+          <Title>{title}</Title>
           <LineTop />
           <LineBottom />
         </ThisTitleSection>

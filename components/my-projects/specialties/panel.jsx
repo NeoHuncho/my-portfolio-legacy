@@ -10,7 +10,7 @@ import Box from "@material-ui/core/Box";
 
 import styled from "styled-components";
 import { mediaQueries } from "../../../styles/mediaQueries";
-import specialtiesTabs from "../../../config/specialties-tabs";
+import specialtiesTabs from "../../../config/my-projects/specialties-tabs";
 import SpecialtyTab from "./tab";
 //import { mediaQueries } from '../../../styling/mediaQueries';
 

@@ -1,9 +1,12 @@
 import Head from "next/head";
-import MyProjectsHeader from "../components/my-projects/my_projects_header";
-import Projects from "../components/my-projects/projects";
-import Specialties from "../components/my-projects/specialties";
 
+import Header from "../components/header";
+import Section from "../components/section";
 import NavBar from "../components/nav_bar";
+
+import ProjectsPanel from "../components/my-projects/projects/panel";
+import SpecialtiesPanel from "../components/my-projects/specialties/panel";
+import main_img from "../public/assets/main_img/main_img";
 
 export default function MyProjects() {
   return (
@@ -20,9 +23,12 @@ export default function MyProjects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <MyProjectsHeader />
-      <Projects />
-      <Specialties />
+      <Header
+        title={"MY PROJECTS"}
+        image={{ src: main_img.computer_projects, width: 1254, height: 657 }}
+      />
+      <Section title="Projects" Component={ProjectsPanel} />
+      <Section title="Specialties" Component={SpecialtiesPanel} />
     </div>
   );
 }

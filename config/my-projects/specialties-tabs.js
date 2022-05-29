@@ -1,4 +1,4 @@
-import technologies from "../public/assets/technologies/logo_text";
+import technologies from "../../public/assets/technologies/logo_text";
 
 const myProjectsTabs = [
   {

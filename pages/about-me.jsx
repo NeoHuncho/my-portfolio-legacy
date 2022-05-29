@@ -1,6 +1,11 @@
 import Head from "next/head";
 import React from "react";
+import Header from "../components/header";
 
+import NavBar from "../components/nav_bar";
+import Section from "../components/section";
+import main_img from "../public/assets/main_img/main_img";
+import Timeline from "../components/about-me/timeline";
 const AboutMe = () => {
   return (
     <div>
@@ -15,6 +20,12 @@ const AboutMe = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NavBar />
+      <Header
+        title={"WHO AM I?"}
+        image={{ src: main_img.me_back, width: 657, height: 506 }}
+      />
+      <Section title={"Timeline"} Component={Timeline} />
     </div>
   );
 };
