@@ -91,13 +91,14 @@ export default function SpecialtiesComponent() {
               label={tab.label}
               {...a11yProps(specialtiesTabs.length - index)}
               style={{ color: "black" }}
+              key={index}
             />
           );
         })}
       </Tabs>
       {specialtiesTabs.map((tab, index) => {
         return (
-          <TabPanel value={value} index={index}>
+          <TabPanel value={value} index={index} key={index}>
             <SpecialtyTab items={tab.items} />
           </TabPanel>
         );

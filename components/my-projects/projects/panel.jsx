@@ -82,13 +82,14 @@ export default function ProjectsPanel() {
               label={tab.label}
               {...a11yProps(projectTabs.length - index)}
               style={{ color: "white" }}
+              key={index}
             />
           );
         })}
       </Tabs>
       {projectTabs.map((tab, index) => {
         return (
-          <TabPanel value={value} index={index}>
+          <TabPanel key={index} value={value} index={index}>
             <ProjectTab items={tab.items} />
           </TabPanel>
         );

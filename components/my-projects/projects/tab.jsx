@@ -25,8 +25,8 @@ function ProjectTab({ items }) {
       transition={{ times: [0, 0.5, 1.1], ease: "easeInOut" }}
     >
       <ProjectPage>
-        {items.map((item) => (
-          <ProjectCard>
+        {items.map((item, index) => (
+          <ProjectCard key={index}>
             {console.log(item)}
             <CardActionArea
               href={item.link}
@@ -67,8 +67,9 @@ function ProjectTab({ items }) {
                   {item.subTitle}
                 </Typography>
                 <TechnologiesSection>
-                  {item.technologies.map((technology) => (
+                  {item.technologies.map((technology, index) => (
                     <Technology
+                      key={index}
                       title={technology.name}
                       src={technology.image.src}
                     />
