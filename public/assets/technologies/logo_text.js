@@ -9,7 +9,7 @@ import github from "./images/logo_text/github.png";
 import gcPlatform from "./images/logo_text/glPlatform.png";
 import illustrator from "./images/logo_text/illustrator.png";
 import mongodb from "./images/logo_text/mongodb.png";
-import mySQL from "./images/logo_text/mysql.png";
+import mySQL from "./images/logo_text/mySQL.png";
 import netlify from "./images/logo_text/netlify.png";
 import next from "./images/logo_text/next.png";
 import npm from "./images/logo_text/npm.png";

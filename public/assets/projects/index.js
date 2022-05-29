@@ -8,7 +8,7 @@ import markdownConverter from "./front-end-projects-FCC/markdown-converter.png";
 import brawlMax from "./full-stack-projects/brawlMax.png";
 import greenCrypto from "./full-stack-projects/greenCrypto.png";
 import portfolio from "./front-end-projects/portfolio.png";
-import toDoList from "./front-end-projects/toDoList.png";
+import toDoList from "./front-end-projects/ToDoList.png";
 
 const projects = {
   cpMobile: { image: cpMobile, name: "Cagette et Paprika Mobile App" },
