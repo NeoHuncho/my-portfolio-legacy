@@ -87,7 +87,7 @@ export default function MyProjectsHeader() {
             }}
           >
             <Image
-              src={main_img.computer_projects.src}
+              src={main_img.computer_projects}
               alt="Computer"
               width={2}
               height={1}
