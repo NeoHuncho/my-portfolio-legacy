@@ -171,6 +171,7 @@ export const SecondaryTitle = styled(Title)`
     font-size: 6vw;
     line-height: 7vw;
   }
+  margin-top: 0px;
 `;
 
 export const ImageSection = styled(motion.div)`

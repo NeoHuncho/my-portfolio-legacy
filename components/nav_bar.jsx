@@ -218,10 +218,9 @@ export default function NavBar() {
     <Navbar>
       <Grid>
         <TitleItem>
-          <StyledLink to="/">
-            {" "}
+          <Link href="/">
             <NavBarItem> W.G</NavBarItem>
-          </StyledLink>
+          </Link>
         </TitleItem>
 
         <NavBarItem>
@@ -281,30 +280,30 @@ export default function NavBar() {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <StyledLink to="/">
+          <Link href="/">
             <ThisMenuItem onClick={handleClose}>Home</ThisMenuItem>
-          </StyledLink>
-          <StyledLink to="/my-projects">
+          </Link>
+          <Link href="/my-projects">
             <ThisMenuItem
               style={{ gridArea: "myProjects" }}
               onClick={handleClose}
             >
               My Projects
             </ThisMenuItem>
-          </StyledLink>
-          <StyledLink to="/about-me">
+          </Link>
+          <Link href="/about-me">
             <ThisMenuItem style={{ gridArea: "aboutMe" }} onClick={handleClose}>
               About Me
             </ThisMenuItem>
-          </StyledLink>
+          </Link>
         </ThisMenu>
 
-        <StyledLink to="/my-projects">
+        <Link href="/my-projects">
           <NotMobileLink>My Projects</NotMobileLink>
-        </StyledLink>
-        <StyledLink to="/about-me">
+        </Link>
+        <Link href="/about-me">
           <NotMobileLink>About Me</NotMobileLink>
-        </StyledLink>
+        </Link>
       </Grid>
     </Navbar>
   );
