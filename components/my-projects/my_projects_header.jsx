@@ -70,7 +70,6 @@ export default function MyProjectsHeader() {
           style={{ zIndex: 1 }}
           width={100}
           height={150}
-          priority={true}
         />
       </Scrooldown>
       <GridHorizontal>
@@ -93,6 +92,7 @@ export default function MyProjectsHeader() {
               width={1254}
               height={657}
               layout="responsive"
+              priority={true}
             />
           </motion.div>
         </ThisImageSection>
