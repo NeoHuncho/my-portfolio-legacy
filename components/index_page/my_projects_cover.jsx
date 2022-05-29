@@ -16,6 +16,7 @@ import {
 import { mediaQueries } from "/styles/mediaQueries.js";
 import Image from "next/image";
 import Link from "next/link";
+import main_img from "../../public/assets/main_img/main_img.js";
 
 const nextLink = () => <Link href="/projects/next-project" />;
 const Svg = styled(motion.img)`
@@ -70,7 +71,7 @@ export default function MyProjects() {
               }}
             >
               <Image
-                src={"/assets/main_img/workspace.png"}
+                src={main_img.workspace.src}
                 width={10}
                 height={6}
                 layout="responsive"
