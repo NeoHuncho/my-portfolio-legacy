@@ -56,8 +56,8 @@ const Svg = styled(motion.img)`
     margin-left: 4%;
   }
 `;
-
 export default function MyProjectsHeader() {
+  console.log(main_img.computer_projects);
   const variantstext = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -70,6 +70,7 @@ export default function MyProjectsHeader() {
           style={{ zIndex: 1 }}
           width={100}
           height={150}
+          priority
         />
       </Scrooldown>
       <GridHorizontal>
@@ -89,8 +90,8 @@ export default function MyProjectsHeader() {
             <Image
               src={main_img.computer_projects}
               alt="Computer"
-              width={2}
-              height={1}
+              width={1254}
+              height={657}
               layout="responsive"
             />
           </motion.div>
