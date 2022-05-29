@@ -15,7 +15,6 @@ import {
 import { mediaQueries } from "../../styles/mediaQueries";
 
 const SubTitle = styled.h2`
-  font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   color: #ffffff;
