@@ -9,12 +9,13 @@ import {
   LineBottom,
   LineTop,
   Scrooldown,
-GridHorizontal,
+  GridHorizontal,
   ImageSection,
 } from "../../styles/styles";
 import { mediaQueries } from "../../styles/mediaQueries";
 
 import Image from "next/image";
+import main_img from "../../public/assets/main_img/main_img";
 
 const ThisTitleSection = styled(motion.div)`
   @media ${mediaQueries.mobile} {
@@ -86,7 +87,7 @@ export default function MyProjectsHeader() {
             }}
           >
             <Image
-              src={"/assets/main_img/computer_projects.png"}
+              src={main_img.computer_projects.src}
               alt="Computer"
               width={2}
               height={1}

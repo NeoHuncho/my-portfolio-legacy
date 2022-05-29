@@ -71,7 +71,7 @@ export default function MyProjects() {
               }}
             >
               <Image
-                src={main_img.workspace.src}
+                src={main_img.workspace}
                 width={10}
                 height={6}
                 layout="responsive"
