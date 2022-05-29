@@ -14,7 +14,7 @@ const AboutMe = () => {
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
-      </He>
+      </Head>
     </div>
   );
 };
