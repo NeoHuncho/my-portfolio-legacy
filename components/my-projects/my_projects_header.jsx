@@ -70,7 +70,7 @@ export default function MyProjectsHeader() {
           style={{ zIndex: 1 }}
           width={100}
           height={150}
-          priority
+          priority={true}
         />
       </Scrooldown>
       <GridHorizontal>
