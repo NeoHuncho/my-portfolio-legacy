@@ -140,6 +140,7 @@ export const IndexPageTitleSection = styled(TitleSection)`
 `;
 
 export const Title = styled.h1`
+  font-family: Roboto;
   font-weight: 700;
   color: #ffffff;
   font-style: normal;
