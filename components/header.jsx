@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
@@ -37,7 +37,8 @@ const ThisImageSection = styled(ImageSection)`
   }
 
   @media ${mediaQueries.ipadAndIpadPro} {
-    margin-left: 11%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 20%;
   }
 `;
@@ -56,6 +57,7 @@ const Svg = styled(motion.img)`
   }
 `;
 export default function Header({ title, image }) {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const variantstext = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -72,9 +74,11 @@ export default function Header({ title, image }) {
       </Scrooldown>
       <GridHorizontal>
         <ThisImageSection
-          intial={{ opacity: 0, x: 0 }}
-          animate={{ opacity: [0, 0, 2] }}
-          transition={{ times: [0, 0.6, 1.2], ease: "easeInOut" }}
+          initial={{ opacity: 0, x: 0 }}
+          animate={imageLoaded && { opacity: [0, 0, 2] }}
+          transition={
+            imageLoaded && { times: [0, 0.6, 1.2], ease: "easeInOut" }
+          }
         >
           <motion.div
             animate={{ y: [0, -10, 0] }}
@@ -91,6 +95,7 @@ export default function Header({ title, image }) {
               height={image.height}
               layout="responsive"
               priority={true}
+              onLoadingComplete={() => setImageLoaded(true)}
             />
           </motion.div>
         </ThisImageSection>

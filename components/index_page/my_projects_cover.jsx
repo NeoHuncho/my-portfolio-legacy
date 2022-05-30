@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
@@ -50,6 +50,7 @@ const ThisTitleSection = styled(TitleSection)`
 `;
 
 export default function MyProjects() {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0,
   });
@@ -60,7 +61,7 @@ export default function MyProjects() {
         <Link href="/my-projects" passHref>
           <ThisImageSection
             initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
+            animate={{ opacity: inView && imageLoaded ? 1 : 0 }}
           >
             <ImageSection
               animate={{ y: [0, -10, 0] }}
@@ -76,6 +77,7 @@ export default function MyProjects() {
                 height={6}
                 layout="responsive"
                 priority
+                onLoadingComplete={() => setImageLoaded(true)}
               />
             </ImageSection>
           </ThisImageSection>
