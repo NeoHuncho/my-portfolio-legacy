@@ -146,7 +146,7 @@ export const Title = styled.h1`
   font-style: normal;
 
   @media ${mediaQueries.mobile} {
-    font-size: 15vw;
+    font-size: 14vw;
     line-height: 8vh;
   }
 

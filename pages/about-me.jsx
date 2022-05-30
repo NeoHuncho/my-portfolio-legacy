@@ -6,6 +6,7 @@ import NavBar from "../components/nav_bar";
 import Section from "../components/section";
 import main_img from "../public/assets/main_img/main_img";
 import Timeline from "../components/about-me/timeline";
+import MoreInformation from "../components/about-me/more_information";
 const AboutMe = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ const AboutMe = () => {
         image={{ src: main_img.me_back, width: 657, height: 506 }}
       />
       <Section title={"Timeline"} Component={Timeline} />
+      <Section title={"More Information"} Component={MoreInformation} />
     </div>
   );
 };
