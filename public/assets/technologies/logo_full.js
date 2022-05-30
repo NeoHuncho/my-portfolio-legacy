@@ -15,19 +15,19 @@ import photoshop from "./images/logo_full/photoshop.webp";
 import react from "./images/logo_full/react.webp";
 import redux from "./images/logo_full/redux.webp";
 import sass from "./images/logo_full/sass.webp";
-import wordPress from "./images/logo_full/Wordpress.png";
-import wooCommerce from "./images/logo_full/wooCommerce.png";
-import typescript from "./images/logo_full/typescript.png";
+import wordPress from "./images/logo_full/Wordpress.webp";
+import wooCommerce from "./images/logo_full/wooCommerce.webp";
+import typescript from "./images/logo_full/typescript.webp";
 import styledComponents from "./images/logo_full/styledComponents.webp";
-import rnNavigation from "./images/logo_full/rnNavigation.png";
-import PHP from "./images/logo_full/PHP.png";
-import next from "./images/logo_full/next.png";
+import rnNavigation from "./images/logo_full/rnNavigation.webp";
+import PHP from "./images/logo_full/PHP.webp";
+import next from "./images/logo_full/next.webp";
 import gcPlatform from "./images/logo_full/gcPlatform.webp";
-import firebase from "./images/logo_full/firebase.png";
-import algolia from "./images/logo_full/algolia.png";
-import mySQL from "./images/logo_full/mySQL.png";
-import python from "./images/logo_full/python.png";
-import github from "./images/logo_full/github.png";
+import firebase from "./images/logo_full/firebase.webp";
+import algolia from "./images/logo_full/algolia.webp";
+import mySQL from "./images/logo_full/mySQL.webp";
+import python from "./images/logo_full/python.webp";
+import github from "./images/logo_full/github.webp";
 
 const technologies = {
   ae: { image: ae, name: "Adobe After Effects" },

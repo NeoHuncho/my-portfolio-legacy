@@ -75,7 +75,7 @@ export default function MyProjects() {
                 width={10}
                 height={6}
                 layout="responsive"
-                
+                priority
               />
             </ImageSection>
           </ThisImageSection>
