@@ -7,27 +7,20 @@ import { mediaQueries } from "../../../styles/mediaQueries";
 const Image = styled(motion.img)`
   max-width: 85px;
 
-  @media ${mediaQueries.mobile} {
-    max-width: 23vh;
+  @media ${mediaQueries.nondesktop} {
+    max-width: 13vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
-  }
-  @media ${mediaQueries.ipadAndIpadPro} {
-    max-width: 12vh;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    margin-bottom: 3vh;
   }
 `;
 
 const Grid = styled(motion.div)`
-  @media ${mediaQueries.nonmobile} {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 `;
 
 function BackEndTab({ items }) {

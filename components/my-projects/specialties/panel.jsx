@@ -59,11 +59,11 @@ const Component = styled.div`
   }
   @media ${mediaQueries.ipadAndIpadPro} {
     margin-top: 7%;
-    height: 20vw;
+    height: 40vh;
   }
   @media ${mediaQueries.mobile} {
     margin-top: 12%;
-    height: 70vh;
+    height: 50vh;
     width: 90%;
   }
 `;
