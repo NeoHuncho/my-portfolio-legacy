@@ -17,7 +17,6 @@ import Typography from "@material-ui/core/Typography";
 import technologies from "../../../public/assets/technologies/logo_full";
 
 function ProjectTab({ items }) {
-  console.log(1, technologies.github.image);
   return (
     <motion.div
       intial={{ opacity: 0 }}
@@ -27,7 +26,6 @@ function ProjectTab({ items }) {
       <ProjectPage>
         {items.map((item, index) => (
           <ProjectCard key={index}>
-            {console.log(item)}
             <CardActionArea
               href={item.link}
               target="_blank"

@@ -67,7 +67,6 @@ export default function Header({ title, image }) {
       <Scrooldown>
         <Image
           src={"/assets/ui_img/scroll_down_bar.svg"}
-          style={{ zIndex: 1 }}
           width={250}
           height={450}
         />

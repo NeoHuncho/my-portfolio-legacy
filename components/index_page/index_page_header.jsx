@@ -42,7 +42,6 @@ function IndexPageHeader() {
       <Scrooldown>
         <Image
           src={"/assets/ui_img/scroll_down_bar.svg"}
-          style={{ zIndex: 1 }}
           width={100}
           height={150}
         />
@@ -51,7 +50,7 @@ function IndexPageHeader() {
         <ImageSection
           initial={{ opacity: 0, x: 50, y: -50 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ ease: "easeInOut", duration: 1.5 }}
+          transition={{ ease: "easeOut", duration: 1.5 }}
         >
           <motion.div
             animate={{ y: [0, -10, 0] }}
