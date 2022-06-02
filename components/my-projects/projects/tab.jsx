@@ -43,7 +43,7 @@ function ProjectTab({ items }) {
 
               <CardContent
                 style={{
-                  height: "auto",
+                  height: "calc(100% - 250px)",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
