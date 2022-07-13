@@ -1,3 +1,4 @@
+import React from "react";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import "../styles/globals.css";
 
@@ -19,7 +20,7 @@ const theme = createTheme({
     },
   },
 });
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: any) {
   return (
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />

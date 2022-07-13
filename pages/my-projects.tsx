@@ -7,7 +7,7 @@ import NavBar from "../components/nav_bar";
 import ProjectsPanel from "../components/my-projects/projects/panel";
 import SpecialtiesPanel from "../components/my-projects/specialties/panel";
 import main_img from "../public/assets/main_img/main_img";
-
+import React from "react";
 export default function MyProjects() {
   return (
     <div style={{ margin: 0 }}>
@@ -15,7 +15,7 @@ export default function MyProjects() {
         <title>William Guinaudie: My Projects</title>
         <meta name="description" content="William Guinaudie: My Projects" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
           rel="stylesheet"

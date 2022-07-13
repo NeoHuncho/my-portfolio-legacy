@@ -21,7 +21,7 @@ import { blue, green, orange, red } from "@material-ui/core/colors";
 function ProjectTab({ items }) {
   return (
     <motion.div
-      intial={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
       animate={{ opacity: [0, 0, 1] }}
       transition={{ times: [0, 0.5, 1.1], ease: "easeInOut" }}
     >

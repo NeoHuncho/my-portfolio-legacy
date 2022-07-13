@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Button from "@material-ui/core/Button";
 import { mediaQueries } from "./mediaQueries";
-import Link from "next/link";
 export const GridHorizontal = styled.div`
   @media ${mediaQueries.nondesktop} {
     width: 100vw;

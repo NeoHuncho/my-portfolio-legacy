@@ -9,7 +9,7 @@ import projectTabs from "../../../config/my-projects/projects-tabs";
 import styled from "styled-components";
 import { mediaQueries } from "../../../styles/mediaQueries";
 import ProjectTab from "./tab";
-function TabPanel(props) {
+function TabPanel(props: any) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -35,7 +35,7 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
+function a11yProps(index: number) {
   return {
     id: `vertical-tab-${index}`,
     "aria-controls": `vertical-tabpanel-${index}`,
@@ -60,14 +60,14 @@ const Component = styled.div`
 export default function ProjectsPanel() {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (_: any, newValue: number) => {
     setValue(newValue);
   };
 
   return (
     <Component style={{ backgroundColor: "rgba(0, 0, 0, 0.00)" }}>
       <Tabs
-        variant={isMobile ? "scrollable" : ""}
+        variant={isMobile ? "scrollable" : "standard"}
         value={value}
         onChange={handleChange}
         aria-label="project tabs"

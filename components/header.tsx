@@ -5,7 +5,6 @@ import styled from "styled-components";
 import {
   FullPage,
   Title,
-  FrontPageTitleSection,
   LineBottom,
   LineTop,
   Scrooldown,
@@ -43,20 +42,15 @@ const ThisImageSection = styled(ImageSection)`
   }
 `;
 
-const Svg = styled(motion.img)`
-  @media ${mediaQueries.mobile} {
-    width: 90vw;
-  }
-  @media ${mediaQueries.ipadAndIpadPro} {
-    width: 80vw;
-  }
-
-  @media ${mediaQueries.desktop} {
-    width: 45vw;
-    margin-left: 4%;
-  }
-`;
-export default function Header({ title, image }) {
+interface Props {
+  title: string;
+  image: {
+    src: string;
+    width: number;
+    height: number;
+  };
+}
+export default function Header({ title, image }: Props) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const variantstext = {
     hidden: { opacity: 0, x: -50 },
@@ -76,7 +70,7 @@ export default function Header({ title, image }) {
           initial={{ opacity: 0, x: 0 }}
           animate={imageLoaded && { opacity: [0, 0, 2] }}
           transition={
-            imageLoaded && { times: [0, 0.6, 1.2], ease: "easeInOut" }
+            imageLoaded ? { times: [0, 0.6, 1.2], ease: "easeInOut" } : {}
           }
         >
           <motion.div
