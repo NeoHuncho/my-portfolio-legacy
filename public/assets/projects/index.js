@@ -9,6 +9,9 @@ import brawlMax from "./full-stack-projects/brawlMax.webp";
 import greenCrypto from "./full-stack-projects/greenCrypto.webp";
 import portfolio from "./front-end-projects/portfolio.webp";
 import toDoList from "./front-end-projects/ToDoList.webp";
+import sam from "./professional-work/sam.webp";
+import tgvMax from "./full-stack-projects/tgv_max.png";
+import cryptoPortfolio from "./full-stack-projects/crypto_portfolio.png";
 
 const projects = {
   cpMobile: { image: cpMobile, name: "Cagette et Paprika Mobile App" },
@@ -22,5 +25,8 @@ const projects = {
   greenCrypto: { image: greenCrypto, name: "Green Crypto Comparaison Site" },
   portfolio: { image: portfolio, name: "My Portfolio" },
   toDoList: { image: toDoList, name: "Generic To Do List" },
+  sam: { image: sam, name: "Slot Allocation Management System (SAM)" },
+  tgvMax: { image: tgvMax, name: "TGV Max bot" },
+  cryptoPortfolio: { image: cryptoPortfolio, name: "Crypto Portfolio" },
 };
 export default projects;

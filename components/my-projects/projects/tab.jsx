@@ -69,13 +69,15 @@ function ProjectTab({ items }) {
                   {item.subTitle}
                 </Typography>
                 <TechnologiesSection>
-                  {item.technologies.map((technology, index) => (
-                    <Technology
+                  {item.technologies.map((technology, index) => {
+            
+                  return  <Technology
                       key={index}
                       title={technology.name}
                       src={technology.image.src}
                     />
-                  ))}
+                  }
+                  )}
                 </TechnologiesSection>
 
                 <Chip
@@ -85,12 +87,12 @@ function ProjectTab({ items }) {
                     color: "white",
                     backgroundColor:
                       item.statusCode === 1
-                        ? blue["900"]
+                        ? blue["700"]
                         : item.statusCode === 2
-                        ? orange["900"]
+                        ? orange["700"]
                         : item.statusCode === 3
-                        ? red["900"]
-                        : green["900"],
+                        ? red["700"]
+                        : green["700"],
                   }}
                 />
               </CardContent>

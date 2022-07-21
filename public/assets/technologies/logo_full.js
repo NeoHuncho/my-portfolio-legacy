@@ -18,6 +18,7 @@ import sass from "./images/logo_full/sass.webp";
 import wordPress from "./images/logo_full/Wordpress.webp";
 import wooCommerce from "./images/logo_full/wooCommerce.webp";
 import typescript from "./images/logo_full/typescript.webp";
+import javascript from "./images/logo_full/js.webp";
 import styledComponents from "./images/logo_full/styledComponents.webp";
 import rnNavigation from "./images/logo_full/rnNavigation.webp";
 import PHP from "./images/logo_full/PHP.webp";
@@ -28,6 +29,8 @@ import algolia from "./images/logo_full/algolia.webp";
 import mySQL from "./images/logo_full/mySQL.webp";
 import python from "./images/logo_full/python.webp";
 import github from "./images/logo_full/github.webp";
+import radium from "./images/logo_full/radium.webp";
+import tailwind from "./images/logo_full/tailwind.webp";
 
 const technologies = {
   ae: { image: ae, name: "Adobe After Effects" },
@@ -45,6 +48,7 @@ const technologies = {
   premier_pro: { image: premier_pro, name: "Adobe Premier Pro" },
   photoshop: { image: photoshop, name: "Adobe Photoshop" },
   react: { image: react, name: "React.js" },
+  javascript: { image: javascript, name: "JavaScript" },
   redux: { image: redux, name: "Redux" },
   sass: { image: sass, name: "Sass" },
   github: { image: github, name: "Github" },
@@ -58,6 +62,7 @@ const technologies = {
   gcPlatform: { image: gcPlatform, name: "Google Cloud Platform" },
   mySQL: { image: mySQL, name: "MySQL" },
   algolia: { image: algolia, name: "Algolia" },
+  tailwind: { image: tailwind, name: "Tailwind" },
   firebase: {
     image: firebase,
     name: "Firebase",
@@ -65,6 +70,10 @@ const technologies = {
   python: {
     image: python,
     name: "Python",
+  },
+  radium: {
+    image: radium,
+    name: "Radium",
   },
 };
 export default technologies;
