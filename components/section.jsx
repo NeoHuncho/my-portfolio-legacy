@@ -20,8 +20,7 @@ export const Page = styled.div`
     #0e021e 100%
   );
   min-height: 96vh;
-  @media ${mediaQueries.desktop} {
-  }
+
   @media ${mediaQueries.mobile} {
     height: 100%;
   }
@@ -29,7 +28,7 @@ export const Page = styled.div`
 
 export const AnimateComponent = styled(motion.div)``;
 
-function Section({ title, Component }) {
+function Section({ title, Component, height }) {
   const { ref, inView } = useInView({
     threshold: 0,
   });

@@ -26,8 +26,8 @@ const AboutMe = () => {
         title={"WHO AM I?"}
         image={{ src: main_img.me_back, width: 657, height: 506 }}
       />
-      <Section title={"Timeline"} Component={Timeline} />
       <Section title={"More Information"} Component={MoreInformation} />
+      <Section title={"Timeline"} Component={Timeline} />   
     </div>
   );
 };

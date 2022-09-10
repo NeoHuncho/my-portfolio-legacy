@@ -11,17 +11,14 @@ export const ProjectPage = styled.div`
     gap: 0% 0px;
     grid-template-areas: ". .";
     justify-items: center;
-    padding-bottom:40px
+    padding-bottom: 40px;
   }
 `;
 
 export const ProjectCard = styled(Card)`
   @media ${mediaQueries.desktop} {
-    max-width: 30vw;
-    max-height: 100%;
-    :nth-child(n + 3) {
-      margin-top: 5%;
-    }
+    width: 100%;
+    max-height: 500px;
   }
   @media ${mediaQueries.nondesktop} {
     margin-bottom: 8%;

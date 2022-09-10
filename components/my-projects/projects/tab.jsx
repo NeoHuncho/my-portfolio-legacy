@@ -9,6 +9,7 @@ import {
   Github,
   GithubLink,
 } from "./card_styles";
+import { Carousel } from '@mantine/carousel';
 
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -24,29 +25,39 @@ function ProjectTab({ items }) {
       intial={{ opacity: 0 }}
       animate={{ opacity: [0, 0, 1] }}
       transition={{ times: [0, 0.5, 1.1], ease: "easeInOut" }}
+      style={{marginTop:'30px'}}
     >
-      <ProjectPage>
+      <Carousel    
+       withIndicators
+       withControls={false}
+      height={550}
+     slideSize='45%'
+      slideGap="xl"
+      align="start">    
         {items.map((item, index) => (
-          <ProjectCard key={index}>
+          <Carousel.Slide key={index} style={{borderRadius:'40px'}}>
             <CardActionArea
               href={item.link}
               target="_blank"
-              style={{ textDecoration: "none", height: "100%" }}
+              style={{ textDecoration: "none",  width:'100%' }}
             >
               <CardMedia
                 component="img"
                 alt={item.image.name}
-                height="223"
+                height="280"
                 image={item.image.image.src}
                 title={item.image.name}
+               
+                
               />
 
               <CardContent
                 style={{
-                  height: "calc(100% - 250px)",
+                height: "200px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
+                  backgroundColor:'whitesmoke'
                 }}
               >
                 <TitleSection>
@@ -97,9 +108,9 @@ function ProjectTab({ items }) {
                 />
               </CardContent>
             </CardActionArea>
-          </ProjectCard>
+          </Carousel.Slide>
         ))}
-      </ProjectPage>
+      </Carousel>
     </motion.div>
   );
 }

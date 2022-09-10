@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 import styled from "styled-components";
@@ -83,21 +83,22 @@ export const TimelineContent = styled(motion.li)`
     margin-bottom: 0;
   }
   @media ${mediaQueries.nonmobile} {
-    width: 50%;
+    width: 60%;
     margin-bottom: 50px;
     position: relative;
+    
 
     :nth-child(odd) {
       float: left;
       clear: right;
-      transform: translateX(-70px);
+      transform: translateX(-33%);
       border-radius: 20px 0px 20px 20px;
     }
 
     :nth-child(even) {
       float: right;
       clear: left;
-      transform: translateX(30px);
+      transform: translateX(25%);
       border-radius: 0px 20px 20px 20px;
     }
 

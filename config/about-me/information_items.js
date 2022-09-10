@@ -1,11 +1,11 @@
 const information_items = [
-  "I have a driving license, but I prefer to bike/public transport 🚴",
-  "I live in Lille, France. (Quartier Fives) 🏠",
-  "Before coding daily, I wanted to become a motion designer. I am therefore competent in Adobe After Effect & Illustrator. 💻",
-  "I am a big fan of virtual reality and own an Oculus Quest 2 right now. 🎮",
-  "I am vegetarian. 🥦",
-  "I am concerned about climate change. 🔥",
-  "I enjoy coding as it allows to learn and improve every day 💻",
+  "I try to be as proactive and concentrated when I work (Pomodoro style). 🍅",
+  "I love to code ( work and side-projects) and learn new things every day. 💻",
+  "I have great messaging/calling skills and work at my optimal from home, 🛖📟 ",
+  "But I also love to meet new people face to face and create a bond! 🤝",
+  "I am concerned about climate change. ✅🥦🚅🚴‍♂️ ❌🛫🛬🥩",
+  "I love the outdoors and enjoy hiking, biking, and climbing (amongst others!). ⛺🏊🧗",
+  "One of my futur goals is to contribute more to open source. 💞",
 ];
 
 export default information_items;

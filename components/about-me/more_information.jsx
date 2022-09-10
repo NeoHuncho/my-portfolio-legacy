@@ -2,6 +2,7 @@ import React from "react";
 import { InView } from "react-intersection-observer";
 import { InnerGrid, ImageSection, Paragraph, Svg } from "./styles";
 import main_img from "../../public/assets/main_img/main_img";
+import information_items from "../../config/about-me/information_items";
 export default function MoreInformation() {
   return (
     <InnerGrid>
@@ -26,38 +27,11 @@ export default function MoreInformation() {
         transition={{ ease: "easeOut", duration: 1.25 }}
         animate={{ opacity: InView ? 1 : 0 }}
       >
-        I have a driving license, but I prefer to bike/public transport{" "}
-        <span role="img" aria-label="image">
-          🚴
-        </span>{" "}
-        <br /> <br />I live in Lille, France. (Quartier Fives){" "}
-        <span role="img" aria-label="image">
-          🏠
-        </span>{" "}
-        <br /> <br />
-        Before coding daily, I wanted to become a motion designer. I am
-        therefore competent in Adobe After Effect & Illustrator.{" "}
-        <span role="img" aria-label="image">
-          💻
-        </span>{" "}
-        <br /> <br />I am a big fan of virtual reality and own an Oculus Quest 2
-        right now.{" "}
-        <span role="img" aria-label="image">
-          🎮
-        </span>{" "}
-        <br /> <br />I am vegetarian.{" "}
-        <span role="img" aria-label="image">
-          🥦
-        </span>{" "}
-        <br /> <br />I am concerned about climate change.{" "}
-        <span role="img" aria-label="image">
-          🔥
-        </span>{" "}
-        <br /> <br />I enjoy coding as it allows to learn and improve every day{" "}
-        <span role="img" aria-label="image">
-          💻
-        </span>{" "}
-        <br /> <br />
+        <div style={{display:'flex', flexDirection:'column',gap:'10'}}>
+        {information_items.map((item, index) => (
+          <p key={index}>{item}</p>
+          ))}
+        </div>
       </Paragraph>
     </InnerGrid>
   );

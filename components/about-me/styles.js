@@ -35,18 +35,19 @@ export const Svg = styled(motion.img)`
   }
 `;
 
-export const Paragraph = styled(motion.p)`
+export const Paragraph = styled(motion.div)`
   font-family: Roboto;
   font-weight: 300;
   color: #ffffff;
   font-style: normal;
+  width: 95%;
   text-align: justify;
   grid-area: paragraph;
 
   @media ${mediaQueries.mobile} {
     line-height: 3.5vh;
     padding-top: 3vh;
-  
+
     margin-left: 4vh;
     margin-right: 4vh;
     font-size: 2vh;

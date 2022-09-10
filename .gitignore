@@ -18,7 +18,7 @@
 # misc
 .DS_Store
 *.pem
-
+/history.js
 # debug
 npm-debug.log*
 yarn-debug.log*
