@@ -38,7 +38,7 @@ function ProjectTab({ items }) {
           <Carousel.Slide key={index} style={{borderRadius:'40px'}}>
         <Card radius={'lg'} shadow='md'>
           <Card.Section>
-            <a href={item.link} target="_blank">
+            <a href={item.link} target="_blank" rel="noreferrer">
               
             <Image  alt={item.image.name}height={300} src={item.image.image.src} />
             </a>
