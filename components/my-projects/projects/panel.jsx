@@ -40,6 +40,7 @@ export default function ProjectsPanel() {
           return (
             <Tabs.Tab
               value={tab.label}
+              key={index}
             >
               {tab.label}
             </Tabs.Tab>
@@ -50,7 +51,7 @@ export default function ProjectsPanel() {
    
       {projectTabs.map((tab, index) => {
         return (
-          <Tabs.Panel value={tab.label} >
+          <Tabs.Panel value={tab.label} key={index} >
             <ProjectTab items={tab.items} />
           </Tabs.Panel>
         );
