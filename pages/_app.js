@@ -1,6 +1,6 @@
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import "../styles/globals.css";
-
+import { MantineProvider } from '@mantine/core';
 const theme = createTheme({
   palette: {
     blue: {
@@ -22,7 +22,10 @@ const theme = createTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
+      <MantineProvider theme={{ fontFamily: 'Roboto', colorScheme:'dark' }} withGlobalStyles withNormalizeCSS>
+
       <Component {...pageProps} />
+      </MantineProvider>
     </ThemeProvider>
   );
 }
