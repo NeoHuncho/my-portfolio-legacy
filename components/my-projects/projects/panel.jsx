@@ -1,46 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { isMobile } from "react-device-detect";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import projectTabs from "../../../config/my-projects/projects-tabs";
 import styled from "styled-components";
 import { mediaQueries } from "../../../styles/mediaQueries";
 import ProjectTab from "./tab";
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`scrollable-auto-tabpanel-${index}`}
-      aria-labelledby={`scrollable-auto-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `vertical-tab-${index}`,
-    "aria-controls": `vertical-tabpanel-${index}`,
-  };
-}
+import{ Tabs } from '@mantine/core';
 
 const Component = styled.div`
   flex-grow: 1;
@@ -66,34 +34,28 @@ export default function ProjectsPanel() {
 
   return (
     <Component style={{ backgroundColor: "rgba(0, 0, 0, 0.00)" }}>
-      <Tabs
-        variant={isMobile ? "scrollable" : ""}
-        value={value}
-        onChange={handleChange}
-        aria-label="project tabs"
-        scrollButtons={isMobile ? "on" : "off"}
-        indicatorColor="primary"
-        textColor="primary"
-        centered
-      >
-        {projectTabs.map((tab, index) => {
+        <Tabs styles={{tabsList:{justifyContent:'center'}}}  defaultValue={projectTabs[0].label}>
+          <Tabs.List>
+          {projectTabs.map((tab, index) => {
           return (
-            <Tab
-              label={tab.label}
-              {...a11yProps(projectTabs.length - index)}
-              style={{ color: "white" }}
-              key={index}
-            />
+            <Tabs.Tab
+              value={tab.label}
+            >
+              {tab.label}
+            </Tabs.Tab>
           );
         })}
-      </Tabs>
+          </Tabs.List>
+
+   
       {projectTabs.map((tab, index) => {
         return (
-          <TabPanel key={index} value={value} index={index}>
+          <Tabs.Panel value={tab.label} >
             <ProjectTab items={tab.items} />
-          </TabPanel>
+          </Tabs.Panel>
         );
       })}
+    </Tabs>
     </Component>
   );
 }
