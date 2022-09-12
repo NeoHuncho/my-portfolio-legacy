@@ -23,7 +23,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <MantineProvider theme={{ fontFamily: 'Roboto', colorScheme:'dark' }} withGlobalStyles withNormalizeCSS>
-
       <Component {...pageProps} />
       </MantineProvider>
     </ThemeProvider>
