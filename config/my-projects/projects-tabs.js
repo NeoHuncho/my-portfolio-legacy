@@ -87,7 +87,7 @@ const myProjectsTabs = [
       },
       {
         link: "https://tgv-max-weekends.netlify.app/",
-        title: "TGV Max Subscription Bot",
+        title: "TGV Max  Bot",
         github: "https://github.com/NeoHuncho/TGV-MAX-BOT",
         subTitle:
           "Allows you to view  upcoming trips from your departure cities to your favorite destinations. ",

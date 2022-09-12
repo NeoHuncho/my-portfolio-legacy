@@ -1,19 +1,15 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import PropTypes from "prop-types";
-//import { makeStyles } from '@material-ui/core/styles';
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-
-//import { motion } from "framer-motion";
+import{ Tabs } from '@mantine/core';
 
 import styled from "styled-components";
 import { mediaQueries } from "../../../styles/mediaQueries";
 import specialtiesTabs from "../../../config/my-projects/specialties-tabs";
 import SpecialtyTab from "./tab";
+import { useSetState } from "@mantine/hooks";
 //import { mediaQueries } from '../../../styling/mediaQueries';
-
+import {isMobile} from 'react-device-detect';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -55,7 +51,7 @@ const Component = styled.div`
 
   @media ${mediaQueries.desktop} {
     margin-top: 7%;
-    height: 13vw;
+    height: 23vw;
   }
   @media ${mediaQueries.ipadAndIpadPro} {
     margin-top: 7%;
@@ -69,40 +65,80 @@ const Component = styled.div`
 `;
 
 export default function SpecialtiesComponent() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
+  const [activeTab, setActiveTab] =useState(specialtiesTabs[0].label);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  useEffect(() => {
+    specialtiesTabs.map((tab, index) => {
+      if (tab.label === activeTab) {
+        console.log(tab.label, activeTab,index)
+        setActiveTabIndex(index);
+      }
+    })
+  }, [activeTab])
   return (
-    <Component>
-      <Tabs
-        orientation="horizontal"
-        variant="scrollable"
-        scrollButtons="on"
-        value={value}
-        onChange={handleChange}
-        aria-label="Horizontal tabs example"
-      >
-        {specialtiesTabs.map((tab, index) => {
+    <Component style={{ backgroundColor: "rgba(0, 0, 0, 0.00)" }}>
+        <Tabs  value={activeTab} onTabChange={setActiveTab} styles={{tabsList:{justifyContent:'center'},tabLabel:{fontSize:'13px'}}}  defaultValue={activeTab.label}>
+          <Tabs.List>
+          {specialtiesTabs.map((tab, index) => {
           return (
-            <Tab
-              label={tab.label}
-              {...a11yProps(specialtiesTabs.length - index)}
-              style={{ color: "black" }}
+            <Tabs.Tab
+              value={tab.label}
               key={index}
-            />
+
+            >
+              {tab.label}
+            </Tabs.Tab>
           );
         })}
-      </Tabs>
-      {specialtiesTabs.map((tab, index) => {
-        return (
-          <TabPanel value={value} index={index} key={index}>
-            <SpecialtyTab items={tab.items} />
-          </TabPanel>
-        );
-      })}
+          </Tabs.List>
+        <div style={{  backgroundColor: 'whitesmoke',minHeight:isMobile?'230px':'120px'}}>
+          <Tabs.Panel  value={specialtiesTabs[activeTabIndex].label} key={specialtiesTabs[activeTabIndex].label} >
+            <SpecialtyTab items={specialtiesTabs[activeTabIndex].items} />
+          </Tabs.Panel>
+        </div>
+
+      
+    </Tabs>
     </Component>
   );
+  
 }
+
+// export default function SpecialtiesComponent() {
+//   const [value, setValue] = React.useState(0);
+
+//   const handleChange = (event, newValue) => {
+//     setValue(newValue);
+//   };
+
+//   return (
+//     <Component>
+//       <Tabs
+//         orientation="horizontal"
+//         variant="scrollable"
+//         scrollButtons="on"
+//         value={value}
+//         onChange={handleChange}
+//         aria-label="Horizontal tabs example"
+//       >
+//         {specialtiesTabs.map((tab, index) => {
+//           return (
+//             <Tab
+//               label={tab.label}
+//               {...a11yProps(specialtiesTabs.length - index)}
+//               style={{ color: "black" }}
+//               key={index}
+//             />
+//           );
+//         })}
+//       </Tabs>
+//       {specialtiesTabs.map((tab, index) => {
+//         return (
+//           <TabPanel value={value} index={index} key={index}>
+//             <SpecialtyTab items={tab.items} />
+//           </TabPanel>
+//         );
+//       })}
+//     </Component>
+//   );
+// }

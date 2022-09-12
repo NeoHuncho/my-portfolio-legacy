@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import PropTypes from "prop-types";
 import { isMobile } from "react-device-detect";
 
@@ -18,6 +18,7 @@ const Component = styled.div`
 
   @media ${mediaQueries.desktop} {
     margin-top: 2%;
+    height:90vh;
   }
   @media ${mediaQueries.mobile} {
     margin-top: 12%;
@@ -26,15 +27,20 @@ const Component = styled.div`
 `;
 
 export default function ProjectsPanel() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
+  const [activeTab, setActiveTab] = useState(projectTabs[0].label);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  
+  useEffect(() => {
+    projectTabs.map((tab, index) => {
+      if (tab.label === activeTab) {
+        setActiveTabIndex(index);
+      }
+    })
+  }, [activeTab])
+  
   return (
     <Component style={{ backgroundColor: "rgba(0, 0, 0, 0.00)" }}>
-        <Tabs styles={{tabsList:{justifyContent:'center'}}}  defaultValue={projectTabs[0].label}>
+        <Tabs  value={activeTab} onTabChange={setActiveTab} styles={{tabsList:{justifyContent:'center'}}}  defaultValue={activeTab.label}>
           <Tabs.List>
           {projectTabs.map((tab, index) => {
           return (
@@ -47,15 +53,12 @@ export default function ProjectsPanel() {
           );
         })}
           </Tabs.List>
-
-   
-      {projectTabs.map((tab, index) => {
-        return (
-          <Tabs.Panel value={tab.label} key={index} >
-            <ProjectTab items={tab.items} />
+       
+          <Tabs.Panel value={projectTabs[activeTabIndex].label} key={projectTabs[activeTabIndex].label} >
+            <ProjectTab items={projectTabs[activeTabIndex].items} />
           </Tabs.Panel>
-        );
-      })}
+
+      
     </Tabs>
     </Component>
   );
