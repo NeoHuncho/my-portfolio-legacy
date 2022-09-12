@@ -16,9 +16,7 @@ export const ProjectPage = styled.div`
 `;
 
 export const ProjectCard = styled(Card)`
-  @media ${mediaQueries.desktop} {
-    width: 100%;
-    max-height: 500px;
+  @media ${mediaQueries.desktop} {    max-height: 500px;
   }
   @media ${mediaQueries.nondesktop} {
     margin-bottom: 8%;
