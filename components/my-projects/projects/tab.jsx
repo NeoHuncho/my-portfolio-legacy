@@ -8,7 +8,7 @@ import {
   TitleSection,
 } from "./card_styles";
 import { Carousel } from '@mantine/carousel';
-import { Card, Divider, Image ,Group,Title,ActionIcon} from '@mantine/core';
+import { Card, Divider, Button, Image ,Group,Title,ActionIcon} from '@mantine/core';
 
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -28,15 +28,14 @@ function ProjectTab({ items }) {
       
     >
       <Carousel    
-       withIndicators
-       withControls={false}
+       withControls
       height={isMobile?730:580}
      slideSize={isMobile?'93%': '45%'}
       slideGap="xl"
       align="start">    
         {items.map((item, index) => (
           <Carousel.Slide key={index} style={{borderRadius:'40px'}}>
-        <Card radius={'lg'} shadow='md'>
+        <Card radius={'lg'} shadow='xl' withBorder  >
           <Card.Section>
             <a href={item.link} target="_blank" rel="noreferrer">
               
@@ -76,22 +75,25 @@ function ProjectTab({ items }) {
                   />
             )}  
             </Group>
-            <Chip
-              label={item.status}
+            
+            <Button
+              radius={'md'}
               style={{
                 marginTop: 20,
                 color: "white",
                 width:'100%',
                 backgroundColor:
                   item.statusCode === 1
-                    ? blue["700"]
+                    ? blue["800"]
                     : item.statusCode === 2
-                    ? orange["700"]
+                    ? orange["800"]
                     : item.statusCode === 3
-                    ? red["700"]
-                    : green["700"],
+                    ? red["800"]
+                    : green["800"],
               }}
-            />
+            >
+              {item.status}
+            </Button>
 
             </div>
           </div>
