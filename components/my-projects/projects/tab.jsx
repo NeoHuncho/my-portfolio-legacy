@@ -6,7 +6,6 @@ import {
   Technology,
   TitleSection,
 } from "./card_styles";
-import { Carousel } from '@mantine/carousel';
 import { Card, Divider, Button, Image ,Group,Title,ActionIcon} from '@mantine/core';
 import { useHover,useMediaQuery } from '@mantine/hooks';
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -17,7 +16,8 @@ import technologies from "../../../public/assets/technologies/logo_full";
 import { Chip } from "@material-ui/core";
 import { blue, green, orange, red } from "@material-ui/core/colors";
 import { useState } from "react";
-import NoSSR from 'react-no-ssr';
+import { Carousel } from '@mantine/carousel';
+
 
 
 
@@ -29,7 +29,6 @@ setActive(true)
   },[])
   if(active)
   return (
-    <NoSSR>
     <motion.div
       intial={{ opacity: 0 }}
       animate={{ opacity: [0, 0, 1] }}
@@ -52,7 +51,6 @@ setActive(true)
         )}
       </Carousel>
     </motion.div>
-    </NoSSR>
   );
   else return <></>
 }
