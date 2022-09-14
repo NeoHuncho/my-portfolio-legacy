@@ -17,7 +17,7 @@ import technologies from "../../../public/assets/technologies/logo_full";
 import { Chip } from "@material-ui/core";
 import { blue, green, orange, red } from "@material-ui/core/colors";
 import { useState } from "react";
-
+import NoSSR from 'react-no-ssr';
 
 
 
@@ -29,6 +29,7 @@ setActive(true)
   },[])
   if(active)
   return (
+    <NoSSR>
     <motion.div
       intial={{ opacity: 0 }}
       animate={{ opacity: [0, 0, 1] }}
@@ -51,6 +52,7 @@ setActive(true)
         )}
       </Carousel>
     </motion.div>
+    </NoSSR>
   );
   else return <></>
 }
