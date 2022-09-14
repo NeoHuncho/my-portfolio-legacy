@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   TechnologiesSection,
@@ -16,12 +16,18 @@ import Typography from "@material-ui/core/Typography";
 import technologies from "../../../public/assets/technologies/logo_full";
 import { Chip } from "@material-ui/core";
 import { blue, green, orange, red } from "@material-ui/core/colors";
+import { useState } from "react";
 
 
 
 
 function ProjectTab({ items }) {
-const isMobile=  useMediaQuery('(max-width: 500px)');
+  const isMobile=  useMediaQuery('(max-width: 500px)');
+  const [active, setActive] = useState(false);
+  useEffect(()=>{
+setActive(true)
+  },[])
+  if(active)
   return (
     <motion.div
       intial={{ opacity: 0 }}
@@ -30,9 +36,23 @@ const isMobile=  useMediaQuery('(max-width: 500px)');
       style={{marginLeft:isMobile?'5%':0, marginTop:'30px'}}
       
     >
-    <CarouselComponent items={items} isMobile={isMobile} />
+      <Carousel    
+       withControls
+      height={isMobile?730:580}
+     slideSize={isMobile? '90%':'45%'}
+      slideGap={isMobile?'md': 'xl'}
+      align={isMobile?'center': 'start'}>    
+        {items.map((item) =>   
+        <Carousel.Slide key={item.title} style={{borderRadius:'40px'}}>
+
+        <ProjectCard item={item} index={item.title}/>
+        </Carousel.Slide>      
+        
+        )}
+      </Carousel>
     </motion.div>
   );
+  else return <></>
 }
 
 const ProjectCard=({item})=>{
@@ -105,40 +125,6 @@ const ProjectCard=({item})=>{
 </Card>
 
   )
-}
-
-const CarouselComponent = ({ items, isMobile }) => { 
-  if(!isMobile)
-  return( <Carousel    
-  withControls
- height={580}
-slideSize={'45%'}
- slideGap={ 'xl'}
- align="start">    
-   {items.map((item) =>   
-   <Carousel.Slide key={item.title} style={{borderRadius:'40px'}}>
-   <ProjectCard item={item} index={item.title}/>
-   </Carousel.Slide>      
-   
-   )}
- </Carousel>)
- else return (
-  <Carousel    
-  withControls
-
-  height={730}
-  slideSize={ '90%'}
-   slideGap={'sm'}
-   align="start">    
-   {items.map((item) =>   
-   <Carousel.Slide key={item.title} style={{borderRadius:'40px'}}>
-   <ProjectCard item={item} index={item.title}/>
-   </Carousel.Slide>      
-   
-   )}
- </Carousel>
- )
-
 }
 
 export default ProjectTab;
