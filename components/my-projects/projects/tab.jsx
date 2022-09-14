@@ -8,7 +8,7 @@ import {
 } from "./card_styles";
 import { Carousel } from '@mantine/carousel';
 import { Card, Divider, Button, Image ,Group,Title,ActionIcon} from '@mantine/core';
-import { useHover } from '@mantine/hooks';
+import { useHover,useMediaQuery } from '@mantine/hooks';
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -16,12 +16,13 @@ import Typography from "@material-ui/core/Typography";
 import technologies from "../../../public/assets/technologies/logo_full";
 import { Chip } from "@material-ui/core";
 import { blue, green, orange, red } from "@material-ui/core/colors";
-import {isMobile} from 'react-device-detect';
+
 
 
 
 function ProjectTab({ items }) {
-
+const isMobile=  useMediaQuery('(max-width: 500px)');
+console.log(1,isMobile)
   return (
     <motion.div
       intial={{ opacity: 0 }}
@@ -33,23 +34,25 @@ function ProjectTab({ items }) {
       <Carousel    
        withControls
       height={isMobile?730:580}
-     slideSize={isMobile?'93%': '45%'}
-      slideGap="xl"
+     slideSize={isMobile? '90%':'45%'}
+      slideGap={isMobile?'sm': 'xl'}
       align="start">    
-        {items.map((item, index) => {
-       
-          return(
-          <Carousel.Slide key={index} style={{borderRadius:'40px'}}>
-        <ProjectCard item={item}/>
-          </Carousel.Slide>
-        )})}
+        {items.map((item) =>   
+        <Carousel.Slide key={item.title} style={{borderRadius:'40px'}}>
+
+        <ProjectCard item={item} index={item.title}/>
+        </Carousel.Slide>      
+        
+        )}
       </Carousel>
     </motion.div>
   );
 }
 
 const ProjectCard=({item})=>{
-  const {hovered, ref}=useHover()
+  const isMobile= useMediaQuery({maxWidth: 500});
+  const {hovered, ref}=useHover();
+
   return(
   <Card radius={'lg'} shadow='xl' withBorder style={hovered && item.link?{transform: "scale(0.98)",transitionDuration:'0.5s'}:{transform: "scale(1)",transitionDuration:'0.5s'}}  >
   <Card.Section ref={ref}>
@@ -80,7 +83,7 @@ const ProjectCard=({item})=>{
     <Divider style={{marginTop:5}} size={'md'}/>
   </div>
     <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-around', height:'100%'}}>
-    <Group align={'center'} position='center' spacing={'xl'} style={{padding:10,marginTop:10, marginRight:isMobile?0:-15,marginLeft:isMobile?0:-15, backgroundColor:'snow',width:'fit-content', borderRadius:10}} >
+    <Group align={'center'} position='center' spacing={'xl'} style={{padding:10,marginTop:10, backgroundColor:'snow',width:'fit-content', borderRadius:10}} >
     {item.technologies.map((technology, index) => 
     <Image
             key={index}
@@ -113,9 +116,9 @@ const ProjectCard=({item})=>{
 
     </div>
   </div>
- 
 </Card>
-)
+
+  )
 }
 
 export default ProjectTab;
