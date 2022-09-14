@@ -19,11 +19,12 @@ import { useState } from "react";
 import { Carousel } from '@mantine/carousel';
 
 
-const isServer = () => typeof window === 'undefined';
 
+const isServer = () => typeof window === 'undefined';
 function ProjectTab({ items }) {
   const isMobile=  useMediaQuery('(max-width: 500px)');
-  if(!isServer)
+
+  if(!isServer())
   return (
     <motion.div
       intial={{ opacity: 0 }}
@@ -34,7 +35,7 @@ function ProjectTab({ items }) {
     >
       <Carousel    
        withControls
-      height={isMobile?730:580}
+      height={isMobile?710:580}
      slideSize={isMobile? '90%':'45%'}
       slideGap={isMobile?'md': 'xl'}
       align={isMobile?'center': 'start'}>    
@@ -52,7 +53,7 @@ function ProjectTab({ items }) {
 }
 
 const ProjectCard=({item})=>{
-  const isMobile= useMediaQuery({maxWidth: 500});
+  const isMobile=  useMediaQuery('(max-width: 500px)');
   const {hovered, ref}=useHover();
 
   return(

@@ -125,7 +125,7 @@ const myProjectsTabs = [
         link: "https://play.google.com/store/apps/details?id=com.brawlMax.brawlMax",
         title: "Brawl Max",
         status:
-          "Project on pause since September 2021. Click for APK or Footage.",
+          "Project on pause.",
         statusCode: 3,
         subTitle:
           "React Native game-companion app, with multiple functionalities to help players improve. Available on Android & IOS.",
