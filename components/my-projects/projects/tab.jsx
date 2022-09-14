@@ -22,7 +22,6 @@ import { blue, green, orange, red } from "@material-ui/core/colors";
 
 function ProjectTab({ items }) {
 const isMobile=  useMediaQuery('(max-width: 500px)');
-console.log(1,isMobile)
   return (
     <motion.div
       intial={{ opacity: 0 }}
@@ -31,20 +30,7 @@ console.log(1,isMobile)
       style={{marginLeft:isMobile?'5%':0, marginTop:'30px'}}
       
     >
-      <Carousel    
-       withControls
-      height={isMobile?730:580}
-     slideSize={isMobile? '90%':'45%'}
-      slideGap={isMobile?'sm': 'xl'}
-      align="start">    
-        {items.map((item) =>   
-        <Carousel.Slide key={item.title} style={{borderRadius:'40px'}}>
-
-        <ProjectCard item={item} index={item.title}/>
-        </Carousel.Slide>      
-        
-        )}
-      </Carousel>
+    <CarouselComponent items={items} isMobile={isMobile} />
     </motion.div>
   );
 }
@@ -119,6 +105,40 @@ const ProjectCard=({item})=>{
 </Card>
 
   )
+}
+
+const CarouselComponent = ({ items, isMobile }) => { 
+  if(!isMobile)
+  return( <Carousel    
+  withControls
+ height={580}
+slideSize={'45%'}
+ slideGap={ 'xl'}
+ align="start">    
+   {items.map((item) =>   
+   <Carousel.Slide key={item.title} style={{borderRadius:'40px'}}>
+   <ProjectCard item={item} index={item.title}/>
+   </Carousel.Slide>      
+   
+   )}
+ </Carousel>)
+ else return (
+  <Carousel    
+  withControls
+
+  height={730}
+  slideSize={ '90%'}
+   slideGap={'sm'}
+   align="start">    
+   {items.map((item) =>   
+   <Carousel.Slide key={item.title} style={{borderRadius:'40px'}}>
+   <ProjectCard item={item} index={item.title}/>
+   </Carousel.Slide>      
+   
+   )}
+ </Carousel>
+ )
+
 }
 
 export default ProjectTab;
