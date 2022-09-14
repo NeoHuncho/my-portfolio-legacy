@@ -19,15 +19,11 @@ import { useState } from "react";
 import { Carousel } from '@mantine/carousel';
 
 
-
+const isServer = () => typeof window === 'undefined';
 
 function ProjectTab({ items }) {
   const isMobile=  useMediaQuery('(max-width: 500px)');
-  const [active, setActive] = useState(false);
-  useEffect(()=>{
-setActive(true)
-  },[])
-  if(active)
+  if(!isServer)
   return (
     <motion.div
       intial={{ opacity: 0 }}
