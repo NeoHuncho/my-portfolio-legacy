@@ -9,7 +9,7 @@ import {
 } from "./card_styles";
 import { Carousel } from '@mantine/carousel';
 import { Card, Divider, Button, Image ,Group,Title,ActionIcon} from '@mantine/core';
-
+import { useHover } from '@mantine/hooks';
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -19,6 +19,7 @@ import { Chip } from "@material-ui/core";
 import { blue, green, orange, red } from "@material-ui/core/colors";
 import {isMobile} from 'react-device-detect';
 function ProjectTab({ items }) {
+
   return (
     <motion.div
       intial={{ opacity: 0 }}
@@ -33,10 +34,12 @@ function ProjectTab({ items }) {
      slideSize={isMobile?'93%': '45%'}
       slideGap="xl"
       align="start">    
-        {items.map((item, index) => (
+        {items.map((item, index) => {
+            const {hovered, ref}=useHover()
+          return(
           <Carousel.Slide key={index} style={{borderRadius:'40px'}}>
-        <Card radius={'lg'} shadow='xl' withBorder  >
-          <Card.Section>
+        <Card radius={'lg'} shadow='xl' withBorder style={hovered && item.link?{transform: "scale(0.98)",transitionDuration:'0.5s'}:{transform: "scale(1)",transitionDuration:'0.5s'}}  >
+          <Card.Section ref={ref}>
             <a href={item.link} target="_blank" rel="noreferrer">
               
             <Image  alt={item.image.name}height={300} src={item.image.image.src} />
@@ -100,7 +103,7 @@ function ProjectTab({ items }) {
          
         </Card>
           </Carousel.Slide>
-        ))}
+        )})}
       </Carousel>
     </motion.div>
   );

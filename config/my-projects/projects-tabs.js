@@ -13,8 +13,8 @@ const myProjectsTabs = [
     items: [
       {
         title: "Slot Allocation Management System (SAM)",
-        status: "Building ... MVP ready soon",
-        statusCode: 2,
+        status: "Private internal platform",
+        statusCode: 1,
         subTitle:
           "A web application to manage the allocation of slots to maximize the efficiency of milkman style delivery.",
         image: projects.sam,
