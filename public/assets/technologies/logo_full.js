@@ -30,8 +30,10 @@ import mySQL from "./images/logo_full/mySQL.webp";
 import python from "./images/logo_full/python.webp";
 import github from "./images/logo_full/github.webp";
 import radium from "./images/logo_full/radium.webp";
-import tailwind from "./images/logo_full/tailwind.webp";
 
+import reactQuery from "./images/logo_full/react-query.webp";
+import mantine from "./images/logo_full/mantine.webp";
+import tailwind from './images/logo_full/tailwind.webp';
 const technologies = {
   ae: { image: ae, name: "Adobe After Effects" },
   chrome: { image: chrome, name: "Chrome Dev Tools" },
@@ -50,6 +52,8 @@ const technologies = {
   react: { image: react, name: "React.js" },
   javascript: { image: javascript, name: "JavaScript" },
   redux: { image: redux, name: "Redux" },
+  mantine: { image: mantine, name: "Mantine" },
+  reactQuery: { image: reactQuery, name: "React Query" },
   sass: { image: sass, name: "Sass" },
   github: { image: github, name: "Github" },
   wordPress: { image: wordPress, name: "WordPress" },

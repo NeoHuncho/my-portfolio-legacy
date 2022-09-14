@@ -12,6 +12,7 @@ export const ProjectPage = styled.div`
     grid-template-areas: ". .";
     justify-items: center;
     padding-bottom: 40px;
+    
   }
 `;
 

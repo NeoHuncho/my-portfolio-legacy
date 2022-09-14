@@ -18,7 +18,7 @@ const Component = styled.div`
 
   @media ${mediaQueries.desktop} {
     margin-top: 2%;
-    height:90vh;
+    min-height:90vh;
   }
   @media ${mediaQueries.mobile} {
     margin-top: 12%;

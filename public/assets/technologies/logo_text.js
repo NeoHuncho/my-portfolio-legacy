@@ -20,6 +20,12 @@ import ts from "./images/logo_text/ts.webp";
 import styledComponents from "./images/logo_text/styledComponents.webp";
 import framerMotion from "./images/logo_text/framerMotion.webp";
 import node from "./images/logo_text/node.webp";
+import vercel from "./images/logo_text/vercel.webp";
+import chrome from "./images/logo_text/chrome.webp";
+import mantine from "./images/logo_text/mantine.webp";
+import tRPC from "./images/logo_text/tRPC.webp";
+import reactQuery from "./images/logo_text/react_query.webp";
+import tailwind from "./images/logo_text/tailwind.webp";
 
 const technologies = {
   python: { image: python, name: "Python" },
@@ -44,5 +50,11 @@ const technologies = {
   styledComponents: { image: styledComponents, name: "Styled Components" },
   framerMotion: { image: framerMotion, name: "Framer Motion" },
   node: { image: node, name: "Node.js" },
+  vercel: { image: vercel, name: "Vercel" },
+  chrome: { image: chrome, name: "Chronium Dev Tools" },
+  mantine: { image: mantine, name: "Mantine" },
+  tRPC: { image: tRPC, name: "tRPC" },
+  tailwind: { image: tailwind, name: "Tailwind" },
+  reactQuery: { image: reactQuery, name: "React Query" },
 };
 export default technologies;

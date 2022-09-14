@@ -12,6 +12,23 @@ const myProjectsTabs = [
     label: "Professional Work",
     items: [
       {
+        title: "Cagette & Paprika Website",
+        status: "Building, releasing soon...",
+        statusCode: 2,
+        subTitle:
+          "Ported PHP frontend to React TS. Added new features and improved UX.",
+        image: projects.paprikaWeb,
+        technologies: [
+          technologies.typescript,
+          technologies.react,
+          technologies.redux,
+          technologies.reactQuery,
+          technologies.mantine
+          
+     
+        ],
+      },
+      {
         title: "Slot Allocation Management System (SAM)",
         status: "Private internal platform",
         statusCode: 1,
@@ -46,14 +63,14 @@ const myProjectsTabs = [
       {
         link: "https://www.cagette-et-paprika.com/",
         title: "Cagette & Paprika website + back-end",
-        status: "Company undergoing transition",
-        statusCode: 2,
+        status: "Maintained",
+        statusCode: 1,
         subTitle:
-          "Migrated website from PHP to React TS. Backend powered by OVH server(node scripts) and wooCommerce.",
+          "Wordpress frontend with WooCommerce(PHP). Backend powered by OVH server(node scripts) and wooCommerce.",
         image: projects.cpWeb,
         technologies: [
-          technologies.typescript,
-          technologies.react,
+          technologies.node,
+          technologies.express,
           technologies.mySQL,
           // technologies.node,
           technologies.algolia,

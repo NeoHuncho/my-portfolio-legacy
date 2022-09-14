@@ -9,15 +9,21 @@ const myProjectsTabs = [
     label: "Front-end Technologies",
     items: [
       technologies.react,
+      technologies.next,
       technologies.redux,
-      technologies.d3,
+      technologies.mantine,
+      technologies.reactQuery,
       technologies.framerMotion,
       technologies.styledComponents,
+      technologies.tailwind,
+      technologies.chrome,
+      technologies.d3,
     ],
   },
   {
     label: "Back End Technologies",
     items: [
+      technologies.tRPC,
       technologies.node,
       technologies.express,
       technologies.gcPlatform,
@@ -30,7 +36,12 @@ const myProjectsTabs = [
   },
   {
     label: "Storage And Deployment",
-    items: [technologies.github, technologies.netlify, technologies.npm],
+    items: [
+      technologies.github,
+      technologies.netlify,
+      technologies.npm,
+      technologies.vercel,
+    ],
   },
   {
     label: "Design Tools",

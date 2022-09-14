@@ -34,10 +34,10 @@ function ProjectTab({ items }) {
       
     >
       <Carousel    
-       withControls
-      height={isMobile?710:580}
-     slideSize={isMobile? '90%':'45%'}
+       withControls={isMobile?false:true}
+     slideSize={isMobile? '90%':'40%'}
       slideGap={isMobile?'md': 'xl'}
+      controlsOffset={'xs'}
       align={isMobile?'center': 'start'}>    
         {items.map((item) =>   
         <Carousel.Slide key={item.title} style={{borderRadius:'40px'}}>
@@ -55,16 +55,15 @@ function ProjectTab({ items }) {
 const ProjectCard=({item})=>{
   const isMobile=  useMediaQuery('(max-width: 500px)');
   const {hovered, ref}=useHover();
-
   return(
   <Card radius={'lg'} shadow='xl' withBorder style={hovered && item.link?{transform: "scale(0.98)",transitionDuration:'0.5s'}:{transform: "scale(1)",transitionDuration:'0.5s'}}  >
   <Card.Section ref={ref}>
     <a href={item.link} target="_blank" rel="noreferrer">
       
-    <Image  alt={item.image.name}height={300} src={item.image.image.src} />
+    <Image  alt={item.image.name} height={250} src={item.image.image.src} />
     </a>
   </Card.Section>
-  <div style={{display:'flex', flexDirection:'column', minHeight:isMobile? '340px':0, justifyContent:'space-around'}}>
+  <div style={{display:'flex', flexDirection:'column', minHeight:isMobile? '340px':'250px', justifyContent:'space-around'}}>
   
   <div>
 
