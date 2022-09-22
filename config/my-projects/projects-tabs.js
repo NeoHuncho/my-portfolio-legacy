@@ -13,8 +13,8 @@ const myProjectsTabs = [
     items: [
       {
         title: "Cagette & Paprika Website",
-        status: "Building, releasing soon...",
-        statusCode: 2,
+        status: "Updated weekly",
+        statusCode: 1,
         subTitle:
           "Ported PHP frontend to React TS. Added new features and improved UX.",
         image: projects.paprikaWeb,
@@ -23,9 +23,38 @@ const myProjectsTabs = [
           technologies.react,
           technologies.redux,
           technologies.reactQuery,
-          technologies.mantine
-          
-     
+          technologies.mantine,
+        ],
+      },
+      {
+        link: "https://play.google.com/store/apps/details?id=com.paprikaapp",
+        title: "Cagette & Paprika React Native App",
+        status: "Updated weekly",
+        statusCode: 1,
+        subTitle:
+          "Groceries Home delivery App. Available for users from Lille(France), on Android & IOS.",
+        image: projects.cpMobile,
+        technologies: [
+          technologies.javascript,
+          technologies.react,
+          technologies.redux,
+          technologies.rnNavigation,
+          technologies.firebase,
+        ],
+      },
+      {
+        title: "Cagette et Paprika Backend",
+        status: "Updated weekly",
+        statusCode: 1,
+        subTitle: "Backend hosted on OVH server. Powered by Node and PHP.",
+        image: projects.cpBackend,
+        technologies: [
+          technologies.node,
+          technologies.express,
+          technologies.mySQL,
+          technologies.algolia,
+          technologies.PHP,
+          technologies.wooCommerce,
         ],
       },
       {
@@ -45,35 +74,13 @@ const myProjectsTabs = [
         ],
       },
       {
-        link: "https://play.google.com/store/apps/details?id=com.paprikaapp",
-        title: "Cagette & Paprika React Native App",
-        status: "Company undergoing transition",
-        statusCode: 2,
-        subTitle:
-          "Groceries Home delivery App. Available for users from Lille(France), on Android & IOS.",
-        image: projects.cpMobile,
-        technologies: [
-          technologies.javascript,
-          technologies.react,
-          technologies.redux,
-          technologies.rnNavigation,
-          technologies.firebase,
-        ],
-      },
-      {
         link: "https://www.cagette-et-paprika.com/",
-        title: "Cagette & Paprika website + back-end",
-        status: "Maintained",
-        statusCode: 1,
-        subTitle:
-          "Wordpress frontend with WooCommerce(PHP). Backend powered by OVH server(node scripts) and wooCommerce.",
+        title: "Cagette & Paprika website (legacy)",
+        status: "Legacy",
+        statusCode: 2,
+        subTitle: "Wordpress frontend with WooCommerce(PHP).",
         image: projects.cpWeb,
         technologies: [
-          technologies.node,
-          technologies.express,
-          technologies.mySQL,
-          // technologies.node,
-          technologies.algolia,
           technologies.wordPress,
           technologies.PHP,
           technologies.wooCommerce,
@@ -125,7 +132,7 @@ const myProjectsTabs = [
         title: "Green Crypto Wiki",
         subTitle:
           "Website listing various crypto currencies and there impact on the environment",
-        status: "Maintained and planned to updated soon",
+        status: "Maintained",
         statusCode: 1,
         image: projects.greenCrypto,
         technologies: [
@@ -141,8 +148,7 @@ const myProjectsTabs = [
       {
         link: "https://play.google.com/store/apps/details?id=com.brawlMax.brawlMax",
         title: "Brawl Max",
-        status:
-          "Project on pause.",
+        status: "Removed from stores",
         statusCode: 3,
         subTitle:
           "React Native game-companion app, with multiple functionalities to help players improve. Available on Android & IOS.",

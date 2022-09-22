@@ -9,14 +9,15 @@ import brawlMax from "./full-stack-projects/brawlMax.webp";
 import greenCrypto from "./full-stack-projects/greenCrypto.webp";
 import portfolio from "./front-end-projects/portfolio.webp";
 import toDoList from "./front-end-projects/ToDoList.webp";
-import sam from "./professional-work/sam.png";
+import sam from "./professional-work/sam.webp";
 import tgvMax from "./full-stack-projects/tgv_max.webp";
 import paprika_web from "./professional-work/paprika_web.webp";
 import cryptoPortfolio from "./full-stack-projects/crypto_portfolio.webp";
-
+import cpBackend from "./professional-work/backend.webp";
 const projects = {
   cpMobile: { image: cpMobile, name: "Cagette et Paprika Mobile App" },
   cpWeb: { image: cpWeb, name: "Cagette et Paprika Web App" },
+  cpBackend: { image: cpBackend, name: "Cagette et Paprika Backend" },
   barChart: { image: barChart, name: "Bar Chart" },
   scatterPlot: { image: scatterPlot, name: "Scatter Plot" },
   calculatorReact: { image: calculatorReact, name: "Calculator" },

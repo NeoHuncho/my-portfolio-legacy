@@ -47,9 +47,8 @@ export const Paragraph = styled(motion.div)`
   @media ${mediaQueries.mobile} {
     line-height: 3.5vh;
     padding-top: 3vh;
-
-    margin-left: 4vh;
-    margin-right: 4vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
     font-size: 2vh;
     margin-bottom: 0;
   }
