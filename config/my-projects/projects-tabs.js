@@ -22,7 +22,7 @@ const myProjectsTabs = [
           technologies.typescript,
           technologies.react,
           technologies.redux,
-          technologies.reactQuery,
+
           technologies.mantine,
         ],
       },
@@ -67,14 +67,13 @@ const myProjectsTabs = [
         technologies: [
           technologies.typescript,
           technologies.react,
-          technologies.redux,
+          technologies.reactQuery,
           technologies.node,
           technologies.express,
           technologies.mongodb,
         ],
       },
       {
-        link: "https://www.cagette-et-paprika.com/",
         title: "Cagette & Paprika website (legacy)",
         status: "Legacy",
         statusCode: 2,
@@ -146,7 +145,6 @@ const myProjectsTabs = [
         ],
       },
       {
-        link: "https://play.google.com/store/apps/details?id=com.brawlMax.brawlMax",
         title: "Brawl Max",
         status: "Removed from stores",
         statusCode: 3,
