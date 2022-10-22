@@ -23,9 +23,10 @@ const myProjectsTabs = [
   {
     label: "Back End Technologies",
     items: [
-      technologies.tRPC,
       technologies.node,
       technologies.express,
+      technologies.tRPC,
+      technologies.serverless,
       technologies.gcPlatform,
       technologies.firebase,
     ],

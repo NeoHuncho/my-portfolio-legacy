@@ -26,7 +26,7 @@ import mantine from "./images/logo_text/mantine.webp";
 import tRPC from "./images/logo_text/tRPC.webp";
 import reactQuery from "./images/logo_text/react_query.webp";
 import tailwind from "./images/logo_text/tailwind.webp";
-
+import serverless from "./images/logo_text/serverless.webp";
 const technologies = {
   python: { image: python, name: "Python" },
   ae: { image: ae, name: "After Effects" },
@@ -48,6 +48,7 @@ const technologies = {
   redux: { image: redux, name: "Redux" },
   ts: { image: ts, name: "TypeScript" },
   styledComponents: { image: styledComponents, name: "Styled Components" },
+  serverless: { image: serverless, name: "Serverless" },
   framerMotion: { image: framerMotion, name: "Framer Motion" },
   node: { image: node, name: "Node.js" },
   vercel: { image: vercel, name: "Vercel" },

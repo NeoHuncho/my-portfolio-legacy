@@ -33,7 +33,8 @@ import radium from "./images/logo_full/radium.webp";
 
 import reactQuery from "./images/logo_full/react-query.webp";
 import mantine from "./images/logo_full/mantine.webp";
-import tailwind from './images/logo_full/tailwind.webp';
+import serverless from "./images/logo_full/serverless.webp";
+import tailwind from "./images/logo_full/tailwind.webp";
 const technologies = {
   ae: { image: ae, name: "Adobe After Effects" },
   chrome: { image: chrome, name: "Chrome Dev Tools" },
@@ -63,6 +64,7 @@ const technologies = {
   rnNavigation: { image: rnNavigation, name: "React Native Navigation" },
   PHP: { image: PHP, name: "PHP" },
   nextJS: { image: next, name: "Next.js" },
+  serverless: { image: serverless, name: "Serverless" },
   gcPlatform: { image: gcPlatform, name: "Google Cloud Platform" },
   mySQL: { image: mySQL, name: "MySQL" },
   algolia: { image: algolia, name: "Algolia" },

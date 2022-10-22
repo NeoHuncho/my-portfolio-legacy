@@ -14,6 +14,7 @@ const myProjectsTabs = [
       {
         title: "Cagette & Paprika Website",
         status: "Updated weekly",
+        link: "https://cagette-et-paprika.com",
         statusCode: 1,
         subTitle:
           "Ported PHP frontend to React TS. Added new features and improved UX.",
@@ -57,22 +58,22 @@ const myProjectsTabs = [
           technologies.wooCommerce,
         ],
       },
-      {
-        title: "Slot Allocation Management System (SAM)",
-        status: "Private internal platform",
-        statusCode: 1,
-        subTitle:
-          "A web application to manage the allocation of slots to maximize the efficiency of milkman style delivery.",
-        image: projects.sam,
-        technologies: [
-          technologies.typescript,
-          technologies.react,
-          technologies.reactQuery,
-          technologies.node,
-          technologies.express,
-          technologies.mongodb,
-        ],
-      },
+      // {
+      //   title: "Slot Allocation Management System (SAM)",
+      //   status: "Private internal platform",
+      //   statusCode: 1,
+      //   subTitle:
+      //     "A web application to manage the allocation of slots to maximize the efficiency of milkman style delivery.",
+      //   image: projects.sam,
+      //   technologies: [
+      //     technologies.typescript,
+      //     technologies.react,
+      //     technologies.reactQuery,
+      //     technologies.node,
+      //     technologies.express,
+      //     technologies.mongodb,
+      //   ],
+      // },
       {
         title: "Cagette & Paprika website (legacy)",
         status: "Legacy",
@@ -101,10 +102,10 @@ const myProjectsTabs = [
         image: projects.cryptoPortfolio,
         technologies: [
           technologies.typescript,
+          technologies.serverless,
           technologies.nextJS,
           technologies.tailwind,
           technologies.node,
-          technologies.gcPlatform,
           technologies.firebase,
         ],
       },
