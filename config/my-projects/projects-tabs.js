@@ -92,7 +92,7 @@ const myProjectsTabs = [
     label: "Full-Stack Projects",
     items: [
       {
-        link: "https://crypto-green-portfolio.vercel.app/",
+        link: "https://binance-portfolio-bot.vercel.app/",
         title: "Crypto Portfolio",
         github: "https://github.com/NeoHuncho/crypto-portfolio",
         subTitle:
