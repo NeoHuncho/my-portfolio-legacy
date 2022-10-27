@@ -178,6 +178,7 @@ const myProjectsTabs = [
         technologies: [
           technologies.javascript,
           technologies.react,
+          technologies.mantine, 
           technologies.nextJS,
           technologies.styledComponents,
           technologies.motion_framer,

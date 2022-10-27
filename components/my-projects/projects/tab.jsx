@@ -52,7 +52,7 @@ function ProjectTab({ items }) {
       intial={{ opacity: 0 }}
       animate={{ opacity: [0, 0, 1] }}
       transition={{ times: [0, 0.5, 1.1], ease: "easeInOut" }}
-      style={{marginLeft:isMobile?'5%':0, marginTop:'30px'}}
+      style={{ marginTop:'30px'}}
       
     >
       <Carousel   
@@ -84,7 +84,7 @@ const ProjectCard=({item})=>{
   <Card radius={'lg'} shadow='xl' withBorder style={hovered && item.link?{transform: "scale(0.98)",transitionDuration:'0.5s'}:{transform: "scale(1)",transitionDuration:'0.5s'}}  >
   <Card.Section ref={ref}>
     <a href={item.link} target="_blank" rel="noreferrer">
-    <Image  alt={item.image.name} height={250} src={item.image.image.src} />
+    <Image fit={isMobile? "contain":'cover'} alt={item.image.name} height={isMobile?160: 250} src={item.image.image.src} />
     </a>
   </Card.Section>
   <div style={{display:'flex', flexDirection:'column', minHeight:isMobile? '340px':'250px', justifyContent:'space-around'}}>

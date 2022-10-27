@@ -63,7 +63,7 @@ export default function SpecialtiesComponent() {
           );
         })}
           </Tabs.List>
-        <div style={{marginTop:'30px',  backgroundColor: 'whitesmoke',minHeight:'150px'}}>
+        <div style={{marginTop:'30px',  backgroundColor: 'whitesmoke',minHeight:'120px'}}>
           <Tabs.Panel  value={specialtiesTabs[activeTabIndex].label} key={specialtiesTabs[activeTabIndex].label} >
             <SpecialtyTab items={specialtiesTabs[activeTabIndex].items} />
           </Tabs.Panel>
