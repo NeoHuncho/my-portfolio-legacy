@@ -73,9 +73,8 @@ function AboutMeCover() {
                 width={4}
                 height={5}
                 layout="responsive"
-              />
-              /
-            </motion.div>
+            />
+              </motion.div>
           </Link>
         </ThisImageSection>
 
